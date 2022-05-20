@@ -95,7 +95,7 @@ GLGetProcAddress :: #distinct i64 // (name: cstr) -> ^void
     glGetUniformLocation :: (program: GLuint, name: ^GLchar) -> GLint ---
     glGetVertexAttribfv :: (index: GLuint, pname: GLenum, params: ^GLfloat) -> void ---
     glGetVertexAttribiv :: (index: GLuint, pname: GLenum, params: ^GLint) -> void ---
-    glGetVertexAttribPointerv :: (index: GLuint, pname: GLenum, pointer: ^rawptr) -> void ---
+    glGetVertexAttribPointerv :: (index: GLuint, pname: GLenum, pointer: ^u32) -> void ---
     glHint :: (target: GLenum, mode: GLenum) -> void ---
     glIsBuffer :: (buffer: GLuint) -> GLboolean ---
     glIsEnabled :: (cap: GLenum) -> GLboolean ---
@@ -156,7 +156,7 @@ GLGetProcAddress :: #distinct i64 // (name: cstr) -> ^void
     glVertexAttrib3fv :: (index: GLuint, v: ^GLfloat) -> void ---
     glVertexAttrib4f :: (index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat) -> void ---
     glVertexAttrib4fv :: (index: GLuint, v: ^GLfloat) -> void ---
-    glVertexAttribPointer :: (index: GLuint, size: GLint, type: GLenum, normalized: GLboolean, stride: GLsizei, pointer: rawptr) -> void ---
+    glVertexAttribPointer :: (index: GLuint, size: GLint, type: GLenum, normalized: GLboolean, stride: GLsizei, pointer: u32) -> void --- // The final parameter is not a pointer, as that does not follow with the FFI.
     glViewport :: (x: GLint, y: GLint, width: GLsizei, height: GLsizei) -> void ---
 
 
@@ -200,7 +200,7 @@ GLGetProcAddress :: #distinct i64 // (name: cstr) -> ^void
     glBindBufferBase :: (target: GLenum, index: GLuint, buffer: GLuint) -> void ---
     glTransformFeedbackVaryings :: (program: GLuint, count: GLsizei, varyings: ^^GLchar, bufferMode: GLenum) -> void ---
     glGetTransformFeedbackVarying :: (program: GLuint, index: GLuint, bufSize: GLsizei, length: ^GLsizei, size: ^GLsizei, type: ^GLenum, name: ^GLchar) -> void ---
-    glVertexAttribIPointer :: (index: GLuint, size: GLint, type: GLenum, stride: GLsizei, pointer: rawptr) -> void ---
+    glVertexAttribIPointer :: (index: GLuint, size: GLint, type: GLenum, stride: GLsizei, pointer: u32) -> void ---
     glGetVertexAttribIiv :: (index: GLuint, pname: GLenum, params: ^GLint) -> void ---
     glGetVertexAttribIuiv :: (index: GLuint, pname: GLenum, params: ^GLuint) -> void ---
     glVertexAttribI4i :: (index: GLuint, x: GLint, y: GLint, z: GLint, w: GLint) -> void ---
