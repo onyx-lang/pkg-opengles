@@ -187,7 +187,7 @@ GLGetProcAddress :: #distinct i64 // (name: cstr) -> ^void
     glBlitFramebuffer :: (srcX0: GLint, srcY0: GLint, srcX1: GLint, srcY1: GLint, dstX0: GLint, dstY0: GLint, dstX1: GLint, dstY1: GLint, mask: GLbitfield, filter: GLenum) -> void ---
     glRenderbufferStorageMultisample :: (target: GLenum, samples: GLsizei, internalformat: GLenum, width: GLsizei, height: GLsizei) -> void ---
     glFramebufferTextureLayer :: (target: GLenum, attachment: GLenum, texture: GLuint, level: GLint, layer: GLint) -> void ---
-    glMapBufferRange :: (target: GLenum, offset: GLintptr, length: GLsizeiptr, access: GLbitfield) -> rawptr ---
+    glMapBufferRange :: (target: GLenum, offset: GLintptr, length: GLsizeiptr, access: GLbitfield) -> cptr(u8) ---
     glFlushMappedBufferRange :: (target: GLenum, offset: GLintptr, length: GLsizeiptr) -> void ---
     glBindVertexArray :: (array: GLint) -> void ---
     glDeleteVertexArrays :: (n: GLsizei, arrays: ^GLuint) -> void ---
