@@ -1,8 +1,9 @@
 package opengles
 
-use package core { cptr }
+use core { package, cptr }
+use runtime
 
-#if #defined((package runtime).Generated_Foreign_Info) {
+#if #defined(runtime.Generated_Foreign_Info) {
     foreign_block :: __foreign_block
 } else {
     #library "onyx_opengles"
