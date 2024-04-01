@@ -39,7 +39,7 @@ ONYX_DEF(glInit, (LONG), ()) {
         os.exit(1);
     }
 
-    result = compile_c_file(c_file_path, string.concat(path, "onyx_opengles"));
+    result = compile_c_file(c_file_path, string.concat(path, "onyx_opengles"), flags="-Wno-int-conversion");
     if !result {
         os.exit(1);
     }
