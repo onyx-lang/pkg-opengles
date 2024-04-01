@@ -280,7 +280,7 @@ GLGetProcAddress :: #distinct i64 // (name: cstr) -> ^void
     glDrawElementsIndirect :: (mode, type: GLenum, indirect: rawptr) -> void ---
     glFramebufferParameteri :: (target, pname: GLenum, param: GLint) -> void ---
     glGenProgramPipelines :: (n: GLsizei, pipelines: ^GLuint) -> void ---
-    glGetBooleani :: (target: GLenum, index: GLuint, data: ^GLboolean) -> void ---
+    glGetBooleani_v :: (target: GLenum, index: GLuint, data: ^GLboolean) -> void ---
     glGetFramebufferParameteriv :: (target, pname: GLenum, params: ^GLint) -> void ---
     glGetMultisamplefv :: (pname: GLenum, index: GLuint, val: ^GLfloat) -> void ---
     glGetProgramInterfaceiv :: (program: GLuint, programInterface, pname: GLenum, params: ^GLint) -> void ---
